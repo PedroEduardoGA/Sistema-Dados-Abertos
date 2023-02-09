@@ -1,0 +1,54 @@
+h1,
+h2 {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+  Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.cargas-table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.cargas-table {
+  border-collapse: collapse;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-style: solid;
+}
+
+.cargas-table thead tr {
+  background-color: #005e98;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cargas-table th,
+.cargas-table td {
+  padding: 12px 15px;
+  border: 1px;
+}
+
+.cargas-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.cargas-table tbody tr:nth-of-type(even) {
+  background-color: #cbcbcb;
+}
+
+.cargas-table tbody tr:last-of-type {
+  border-bottom: 2px solid #006f98;
+}
+
+.cargas-table tbody tr.active-row {
+  font-weight: bold;
+  color: #008198;
+}
+
+
+
+

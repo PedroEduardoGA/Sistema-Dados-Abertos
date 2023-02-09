@@ -1,0 +1,28 @@
+<style>
+  #opcao {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+  }
+  canvas{
+    width: 40% !important;
+    height: 40% !important;
+  }
+</style>
+<div>
+  <div *ngIf="this.cards" >
+    <h1>Percentual da Populacao Vitima de Crimes Envolvendo Morte</h1>
+    <div  class="card-wrapper">
+      <mat-card *ngFor="let e of this.estados">
+        <mat-card-title-group>
+          <mat-card-title> {{e.nome}} em {{e.ano}} </mat-card-title>
+          <mat-card-subtitle> {{e.percentual.toFixed(5)}}% </mat-card-subtitle>
+          <img mat-card-lg-image [src]="e.url" class="rounded-mb mb-4" style="margin-left: 2px;">
+        </mat-card-title-group>
+      </mat-card>
+    </div>
+  </div>
+  <div *ngIf="!this.cards">
+    <canvas id='opcao'></canvas>
+  </div>
+</div>

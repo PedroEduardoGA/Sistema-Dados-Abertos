@@ -1,0 +1,18 @@
+<mat-toolbar class="mat-elevation-z4" style="background-color: rgb(0, 189, 214)">
+  <button style="font-size: 40px" mat-button (click)="router.navigate(['/home'])">
+    SDA-PP
+  </button>
+  <span class="spacer"></span>
+  <button mat-button (click)="router.navigate(['/upload'])">
+    <em class="bi bi-file-earmark-arrow-up-fill bi-lg"></em>
+  </button>
+  <button mat-button (click)="router.navigate(['/reports'])">
+    <em class="bi bi-clipboard2-data-fill"></em>
+  </button>
+  <button mat-button (click)="router.navigate(['/search'])">
+    <em class="bi bi-search"></em>
+  </button>
+
+
+</mat-toolbar>
+<router-outlet></router-outlet>

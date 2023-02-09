@@ -1,0 +1,135 @@
+<mat-card class="report-form-card">
+  <mat-card-title>
+    Quantidade de Crimes por Estado
+  </mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Ano</mat-label>
+        <mat-select [(value)] ="selectedAno" required>
+          <mat-option *ngFor="let ano of anosList" [value] = "ano.ano">
+            {{ano.ano}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Tipo</mat-label>
+        <mat-select [(value)]="selectedTipo" required>
+          <mat-option *ngFor="let tipo of tiposList" [value] = "tipo.tipo">
+            {{tipo.tipo}}
+          </mat-option>
+          <mat-option value="Todos">Todos</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button style="background-color: rgb(100, 189, 214); color: 'black';" mat-raised-button (click)="onButtonClick(1)" color="primary">Buscar</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="report-form-card">
+  <mat-card-title>
+    Diferença na Quantidade de Crimes por Região
+  </mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Ano</mat-label>
+        <mat-select [(value)] ="selectedAno" required>
+          <mat-option *ngFor="let ano of anosList" [value] = "ano.ano">
+            {{ano.ano}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Região</mat-label>
+        <mat-select [(value)]="selectedRegiao" required>
+          <mat-option *ngFor="let regiao of regioesList" [value] = "regiao.nome">
+            {{regiao.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button style="background-color: rgb(100, 189, 214); color: 'black';" mat-raised-button (click)="onButtonClick(2)" color="primary">Buscar</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="report-form-card">
+  <mat-card-title>
+    Percentual da Populacao Vitima de Crimes Envolvendo Morte
+  </mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Ano</mat-label>
+        <mat-select [(value)] ="selectedAno" required>
+          <mat-option *ngFor="let ano of anosList" [value] = "ano.ano">
+            {{ano.ano}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button style="background-color: rgb(100, 189, 214); color: 'black';" mat-raised-button (click)="onButtonClick(3)" color="primary">Buscar</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="report-form-card">
+  <mat-card-title>
+    Diferença na Quantidade de Crimes por Sexo das Vítimas
+  </mat-card-title>
+  <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Região</mat-label>
+        <mat-select [(value)]="selectedRegiao" required>
+          <mat-option *ngFor="let regiao of regioesList" [value] = "regiao.nome">
+            {{regiao.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Estado</mat-label>
+        <mat-select [(value)]="selectedEstado" required>
+          <mat-option *ngFor="let estado of estadosList" [value] = "estado.nome">
+            {{estado.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button  style="background-color: rgb(100, 189, 214); color: 'black';" mat-raised-button (click)="onButtonClick(4)" color="primary">Buscar</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="report-form-card">
+  <mat-card-title>
+    Crescimento na Ocorrência de Crimes ou População por Ano
+  </mat-card-title>
+  <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Região</mat-label>
+        <mat-select [(value)]="selectedRegiao" required>
+          <mat-option *ngFor="let regiao of regioesList" [value] = "regiao.nome">
+            {{regiao.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Estado</mat-label>
+        <mat-select [(value)]="selectedEstado" required>
+          <mat-option *ngFor="let estado of estadosList" [value] = "estado.nome">
+            {{estado.nome}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="full-width field-select">
+        <mat-label>Opção</mat-label>
+        <mat-select [(value)] = selectedOpcao required>
+          <mat-option value="crimes">Crimes</mat-option>
+          <mat-option value="crimes-morte">Crimes com Vítimas</mat-option>
+          <mat-option value="populacao">População</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button style="background-color: rgb(100, 189, 214); color: 'black';" mat-raised-button (click)="onButtonClick(5)" color="primary">Buscar</button>
+  </mat-card-actions>
+</mat-card>

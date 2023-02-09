@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+h1{
+    margin: 1rem;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    color: #000000;
+}
+
+.mat-card{
+    max-width: 20rem;
+    min-width: 20rem;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 10px;
+}

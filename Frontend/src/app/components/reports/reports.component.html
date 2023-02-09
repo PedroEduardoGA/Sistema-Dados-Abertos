@@ -1,0 +1,19 @@
+<div>
+  <table class="cargas-table">
+    <caption>Tabela de Cargas</caption>
+    <thead>
+    <tr class="table-head">
+      <th scope="col">Nome do arquivo</th>
+      <th scope="col" class="tr-max">Data e Hora</th>
+      <th scope="col" class="tr-max-fold">Quantidade de tuplas</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let carga of cargasList">
+        <td style="padding-top: 1rem;">{{carga.nome}} </td>
+        <td style="padding-top: 1rem;">{{carga.dataStr}}</td>
+        <td style="padding-top: 1rem;">{{carga.numero_tuplas}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

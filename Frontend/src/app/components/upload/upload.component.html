@@ -1,0 +1,8 @@
+<div class="text-center">
+  <div class="indice-upload" style="float:left; margin-right: 65px;">
+    <input style="margin-right:10px;" multiple class="ng-hide" id="file-input-indice" type="file" accept="xlsx, xls" (change)="onChange($event)">
+    <button type="button" mat-raised-button (click)="onIndiceUpload()" class="btn btn-success"> Upload Indice </button>
+  </div>
+  <input style="margin-right:10px;" multiple class="ng-hide" id="file-input-poptotal" type="file" accept="xlsx, xls" (change)="onChange($event)">
+  <button type="button" mat-raised-button (click)="onPopUpload()" class="btn btn-success"> Upload PopTotal </button>
+</div>
